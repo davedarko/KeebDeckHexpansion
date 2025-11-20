@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "tildagon")(type "KiCad")(uri "${KIPRJMOD}/libraries/tildagon.pretty")(options "")(descr ""))
+  (lib (name "TCA8418RTWR")(type "KiCad")(uri "${KIPRJMOD}/libraries/TCA8418RTWR")(options "")(descr ""))
+)
