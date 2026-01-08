@@ -1539,7 +1539,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Memory_EEPROM:AT24CS02-MAHM"
+		(symbol "Memory_EEPROM:AT24CS64-XHM"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1551,7 +1551,7 @@
 					)
 				)
 			)
-			(property "Value" "AT24CS02-MAHM"
+			(property "Value" "AT24CS64-XHM"
 				(at 2.54 -6.35 0)
 				(effects
 					(font
@@ -1560,7 +1560,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm"
+			(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1569,7 +1569,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8815-SEEPROM-AT24CS01-02-Datasheet.pdf"
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8870-SEEPROM-AT24CS64-Datasheet.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1578,7 +1578,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "I2C Serial EEPROM, 2Kb (256x8) with Unique Serial Number, UDFN8"
+			(property "Description" "I2C Serial EEPROM, 64Kb (8192x8) with Unique Serial Number, TSSOP8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1596,7 +1596,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DFN*3x2mm*P0.5mm*"
+			(property "ki_fp_filters" "TSSOP*4.4x3mm*P0.65mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1605,7 +1605,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "AT24CS02-MAHM_1_1"
+			(symbol "AT24CS64-XHM_1_1"
 				(rectangle
 					(start -7.62 5.08)
 					(end 7.62 -5.08)
@@ -1700,25 +1700,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -31315,6 +31296,12 @@
 		(uuid "bdcaa00f-2dc6-447b-9a1b-ed7a7e2610c1")
 	)
 	(junction
+		(at 64.77 177.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "beab089f-01c1-456d-871d-ac64460ab00e")
+	)
+	(junction
 		(at 238.76 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -31576,6 +31563,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 173.99) (xy 64.77 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03f89506-4573-437d-ad2a-033e465f7e7b")
+	)
+	(wire
+		(pts
 			(xy 182.88 85.09) (xy 167.64 85.09)
 		)
 		(stroke
@@ -31716,7 +31713,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 177.8) (xy 63.5 177.8)
+			(xy 67.31 177.8) (xy 64.77 177.8)
 		)
 		(stroke
 			(width 0)
@@ -32103,16 +32100,6 @@
 			(type default)
 		)
 		(uuid "3f6d849c-8905-4b2d-b809-05dec1c8f284")
-	)
-	(wire
-		(pts
-			(xy 256.54 67.31) (xy 261.62 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "410a0bd2-f2b0-4533-80d7-fc878a08304b")
 	)
 	(wire
 		(pts
@@ -32733,6 +32720,16 @@
 			(type default)
 		)
 		(uuid "7e4d2ba3-378a-455e-9bf9-e3a8e5630dde")
+	)
+	(wire
+		(pts
+			(xy 64.77 177.8) (xy 63.5 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8145cd05-8b10-44f6-94e8-b0a2f132622f")
 	)
 	(wire
 		(pts
@@ -34036,6 +34033,28 @@
 			)
 		)
 	)
+	(global_label "LED_CTRL"
+		(shape input)
+		(at 222.25 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0a4225f0-1588-4342-a599-201e7cce596c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.3144 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 226.06 44.45 180)
@@ -34102,6 +34121,28 @@
 			)
 		)
 	)
+	(global_label "LED_CTRL"
+		(shape input)
+		(at 256.54 49.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7ce79bef-fce3-433c-a33b-a27b6f6a59c5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 268.4756 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 63.5 182.88 0)
@@ -34148,6 +34189,28 @@
 	)
 	(global_label "RST"
 		(shape input)
+		(at 256.54 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a5757414-8c7c-4d42-8aa1-49d7ffd22e16")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 262.9723 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RST"
+		(shape input)
 		(at 71.12 185.42 0)
 		(fields_autoplaced yes)
 		(effects
@@ -34170,7 +34233,7 @@
 	)
 	(global_label "!INT"
 		(shape input)
-		(at 261.62 67.31 0)
+		(at 256.54 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -34180,7 +34243,7 @@
 		)
 		(uuid "cc522df6-dbb3-4df2-8b65-b202b1096f86")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 268.1129 67.31 0)
+			(at 263.0329 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34452,6 +34515,84 @@
 			(project "keeb"
 				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 170.18 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07bc0967-ccb9-4db4-b3c4-3fc0965e75ac")
+		(property "Reference" "R7"
+			(at 67.31 168.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "3k3"
+			(at 67.31 171.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 66.548 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dc254518-ca56-4a2e-8c38-544d01435324")
+		)
+		(pin "1"
+			(uuid "1993b4b0-9ac7-4326-81e2-b90bbf49cd15")
+		)
+		(instances
+			(project "main"
+				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -37391,6 +37532,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Memory_EEPROM:AT24CS64-XHM")
+		(at 26.67 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "766f8ab3-a5e1-4f38-944c-26bcc645e2b9")
+		(property "Reference" "U4"
+			(at 28.8133 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AT24CS64-XHM"
+			(at 28.8133 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
+			(at 26.67 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8870-SEEPROM-AT24CS64-Datasheet.pdf"
+			(at 26.67 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "I2C Serial EEPROM, 64Kb (8192x8) with Unique Serial Number, TSSOP8"
+			(at 26.67 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C2875852"
+			(at 26.67 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "fec98559-ed6c-4a91-a560-6094fa559cb7")
+		)
+		(pin "8"
+			(uuid "a19f8dfd-c7fb-4d4f-b74c-fbd5e4bd717b")
+		)
+		(pin "7"
+			(uuid "b3721b77-2938-46d5-b9e0-2829cc19c4a6")
+		)
+		(pin "6"
+			(uuid "a0eecd15-e888-4766-a0b3-115128e43642")
+		)
+		(pin "5"
+			(uuid "b957eb96-cac7-47b4-9257-ca3f5af3657b")
+		)
+		(pin "3"
+			(uuid "e88a8a72-8129-4163-9317-efb267a1cdd3")
+		)
+		(pin "1"
+			(uuid "62b708eb-7594-4cd8-a6ce-254f0b9f567c")
+		)
+		(pin "2"
+			(uuid "cadf521f-d137-449b-b318-00770498410f")
+		)
+		(instances
+			(project ""
+				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "tildagon:hexpansion-edge-connector")
 		(at 243.84 57.15 0)
 		(unit 1)
@@ -38163,106 +38401,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Memory_EEPROM:AT24CS02-MAHM")
-		(at 26.67 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a2db783-4931-4c16-97ac-760030663cc7")
-		(property "Reference" "U3"
-			(at 28.8133 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AT24CS02-MAHM"
-			(at 28.8133 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm"
-			(at 26.67 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8815-SEEPROM-AT24CS01-02-Datasheet.pdf"
-			(at 26.67 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "I2C Serial EEPROM, 2Kb (256x8) with Unique Serial Number, UDFN8"
-			(at 26.67 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 26.67 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "2c5356b7-4061-445f-97ba-7d9716beb858")
-		)
-		(pin "2"
-			(uuid "1e3e0024-a006-45e2-8cac-6773ac2b369c")
-		)
-		(pin "7"
-			(uuid "9ae94310-2044-476e-9530-dae24138e68a")
-		)
-		(pin "8"
-			(uuid "4f535959-d057-4559-a99b-c145c4c367c1")
-		)
-		(pin "6"
-			(uuid "1f228a92-51fc-47bb-864b-2dd1b2ac1096")
-		)
-		(pin "3"
-			(uuid "7d83c890-a20c-4938-93a4-c72a1879b0eb")
-		)
-		(pin "4"
-			(uuid "29a8c504-2d05-43b7-be8f-607d05c29ee1")
-		)
-		(pin "1"
-			(uuid "361de42d-9740-409e-9693-0c7d380fb081")
-		)
-		(pin "9"
-			(uuid "da151494-abbe-42e1-881b-5f3f558277d1")
-		)
-		(instances
-			(project ""
-				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 222.25 129.54 0)
 		(mirror y)
@@ -38884,6 +39022,72 @@
 			(project "keeb"
 				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 64.77 166.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "afe552b8-3300-4e7c-9ab8-8bec5903729a")
+		(property "Reference" "#PWR022"
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 64.77 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b71e3426-d2c0-464e-8b83-a7a16c4371a0")
+		)
+		(instances
+			(project "main"
+				(path "/fb9bfa6e-c44d-469c-aa90-8ec28bcdf17f"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
