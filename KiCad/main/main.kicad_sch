@@ -37550,7 +37550,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "AT24CS64-XHM"
+		(property "Value" "ZD24C64A-XGMT"
 			(at 28.8133 172.72 0)
 			(effects
 				(font
@@ -37568,7 +37568,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8870-SEEPROM-AT24CS64-Datasheet.pdf"
+		(property "Datasheet" ""
 			(at 26.67 180.34 0)
 			(effects
 				(font
@@ -37577,7 +37577,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "I2C Serial EEPROM, 64Kb (8192x8) with Unique Serial Number, TSSOP8"
+		(property "Description" ""
 			(at 26.67 180.34 0)
 			(effects
 				(font
