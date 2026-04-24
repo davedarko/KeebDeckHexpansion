@@ -1,0 +1,5 @@
+{
+    "callable": "LEDTestApp",
+	"name": "LED Testing",
+	"path": "apps.LEDtest.app"
+}
